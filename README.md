@@ -52,3 +52,23 @@ pipenv run python manage.py runserver
 Access the Admin Interface
 
 Visit http://127.0.0.1:8000/admin in your browser. Log in with the superuser credentials to manage the library’s books and events.
+
+![image](https://github.com/user-attachments/assets/00c05e0b-41ff-491f-a661-85afd1f2def6)
+
+![image](https://github.com/user-attachments/assets/d14e9d13-2b1d-419d-af6d-73ab84601c5a)
+
+![image](https://github.com/user-attachments/assets/27dc7210-e711-4e16-9ef0-b594330a27a2)
+
+![image](https://github.com/user-attachments/assets/14c42bab-0f5a-4082-8b34-74aa86fe073f)
+
+![image](https://github.com/user-attachments/assets/2ed9538e-c964-4ccc-894a-84e7d5107a32)
+
+![image](https://github.com/user-attachments/assets/616866f4-0580-48b4-a77d-42d75b169558)
+
+
+
+
+
+
+
+
