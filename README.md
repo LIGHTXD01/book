@@ -65,8 +65,7 @@ Visit http://127.0.0.1:8000/admin in your browser. Log in with the superuser cre
 
 ![image](https://github.com/user-attachments/assets/616866f4-0580-48b4-a77d-42d75b169558)
 
-
-
+![image](https://github.com/user-attachments/assets/7415806e-c0c5-4d7f-81ee-dd94cdcded2a)
 
 
 
