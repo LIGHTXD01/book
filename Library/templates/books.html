@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+    <div class="page-title" data-aos="fade">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Search Books</h1>
+                <form method="get" action="{% url 'books' %}">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="q"
+                      class="form-control"
+                      placeholder="Search for books by title or author..."
+                      aria-label="Search for books"
+                      required
+                    >
+                    <button class="btn btn-primary" type="submit">Search</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Courses Section -->
+    <section id="courses" class="courses section">
+
+      <div class="container">
+        {% if query %}
+        <p>Showing results for: <strong>{{ query }}</strong></p>
+        {% if books %}
+        <div class="row">
+            {% for book in books %}
+                <td></td>
+                <td>{{ book.genre }}</td>
+                <td>{{ book.year_published }}</td>
+           
+          <div class="col-lg-3 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="course-item">
+              <img src="{{ book.cover_image.url }}" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <p class="category">{{ book.title }}</p>
+                  <p class="price">{{book.copies_available}} {{book.img}}</p>
+                </div>
+
+                <h3><a href="course-details.html">{{ book.text }}</a></h3>
+                <p class="description">ISBN: {{ book.isbn }}</p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="{% static 'assets/img/trainers/trainer-1-2.jpg'  %}" class="img-fluid" alt="">
+                    <a href="" class="trainer-link">{{ book.author }}</a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <p>No books found matching your search criteria.</p>
+      {% endif %}
+    {% else %}
+      <p>Please enter a search term.</p>
+    {% endif %}
+      </div>
+
+    </section>
+
+  </main>
+{% endblock %}
